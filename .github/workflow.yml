@@ -1,0 +1,27 @@
+name: Test VRP Solutions
+
+on: [pull_request]
+
+jobs:
+  test-solutions:
+    runs-on: ubuntu-latest
+    outputs:
+      changed-dir: ${{ steps.set_changed_dir.outputs.changed-dir }}
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Important to fetch all history for git diff
+
+    - name: Identify Changed Directories
+      id: set_changed_dir
+      run: |
+        CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^Groups/' | cut -d'/' -f2 | uniq)
+        echo "Changed directories: $CHANGED_DIRS"
+        echo "::set-output name=changed-dir::$CHANGED_DIRS"
+
+    - name: Run tests on group's submission
+      run: |
+        for DIR in ${{ steps.set_changed_dir.outputs.changed-dir }}
+        do
+          python .github/tests.py Groups/$DIR
+        done
