@@ -17,11 +17,20 @@ jobs:
       run: |
         CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^Groups/' | cut -d'/' -f2 | uniq)
         echo "Changed directories: $CHANGED_DIRS"
-        echo "::set-output name=changed-dir::$CHANGED_DIRS"
+        if [ -n "$CHANGED_DIRS" ]; then
+          echo "CHANGED_DIRS=$CHANGED_DIRS" >> $GITHUB_ENV
+        fi
 
     - name: Run tests on group's submission
       run: |
-        for DIR in ${{ steps.set_changed_dir.outputs.changed-dir }}
+        if [ -z "${CHANGED_DIRS}" ]; then
+          echo "No group directories have changed."
+          exit 0
+        fi
+        IFS=' ' read -r -a DIR_ARRAY <<< "${CHANGED_DIRS}"
+        for DIR in "${DIR_ARRAY[@]}"
         do
-          python .github/tests.py Groups/$DIR
+          python .github/run_tests.py Groups/$DIR
         done
+
+
