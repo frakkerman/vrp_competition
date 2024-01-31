@@ -17,6 +17,7 @@ def main(instance):
         solution (vrplib): solution in vrplib format.
     """
 
+
     # get instance keys
     print(instance.keys())
 
