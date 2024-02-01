@@ -32,5 +32,5 @@ def main(instance):
 
 if __name__ == "__main__":
     # Read VRPLIB formatted instances, here you can read any instance you want
-    instance = vrplib.read_instance("../Instances/Test/X-n101-k25.vrp")
-    sol = main(instance)
+    #instance = vrplib.read_instance("../Instances/Test/X-n101-k25.vrp")
+    #sol = main(instance)
