@@ -3,7 +3,7 @@ import subprocess
 import sys
 
 
-def run_test_for_group(group_dir, instances_dir='../Instances/Test'):
+def run_test_for_group(group_dir, instances_dir='Instances/Test'):
     """
     Run the specified group's main.py against all instances in the instances directory.
 
