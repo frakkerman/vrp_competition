@@ -21,7 +21,7 @@ def run_test_for_group(group_dir, instances_dir='Instances/Test'):
         return
 
         # Construct the path to the group's main.py
-    main_py_path = os.path.join('Groups', group_dir, 'main.py')
+    main_py_path = os.path.join(group_dir, 'main.py')
 
     # Dynamically import the group's main.py
     spec = importlib.util.spec_from_file_location("module.name", main_py_path)
