@@ -34,7 +34,7 @@ def run_test_for_group(group_dir, instances_dir='../Instances/Test'):
             print("No errors")
 
 if __name__ == "__main__":
-    The script expects the full path to the group's directory as the first command-line argument
+    #The script expects the full path to the group's directory as the first command-line argument
     if len(sys.argv) < 2:
         print("Usage: python run_tests.py <FullPathToGroupDir>")
         sys.exit(1)
