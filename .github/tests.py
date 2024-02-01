@@ -36,7 +36,7 @@ def run_test_for_group(group_dir, instances_dir='Instances/Test'):
 
 
     # Execute the main function
-    solution = group_module.main(instance_path)
+    solution = group_module.main(instance)
 
     # Here you can validate or work with the solution as needed
     print("Solution:", solution)
