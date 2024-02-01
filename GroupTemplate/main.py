@@ -17,12 +17,11 @@ def main(instance):
         solution (vrplib): solution in vrplib format.
     """
 
-    # get instance keys
+    # Example operation on the instance
     print(instance.keys())
 
-    # For this test, we provide the solution. Note that we expect you to provide us with the code that obtains the
-    # solution, i.e., just providing solution files is not enough. The solution returned only requires the routes and
-    # sequence of visits, e.g., costs of routes do not need to be included as we calculate them ourselves
+    # For this example, we directly return a solution read from a file
+    # In real scenarios, students should implement logic to generate the solution
     solution = vrplib.read_solution("../Instances/Test/Sol/X-n101-k25.sol")
 
     # see vrplib documentation for some reading and writing tools
