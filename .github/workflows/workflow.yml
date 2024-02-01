@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - 'Groups/**'
-      - 'Instance/Test/**'
+      - 'Instances/Test/**'
   workflow_dispatch:
     inputs:
       group_number:
