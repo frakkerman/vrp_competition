@@ -22,6 +22,14 @@ jobs:
       with:
         fetch-depth: 0  # Important to fetch all history for git diff
 
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'  
+
+    - name: Install Python dependencies
+      run: pip install -r requirements.txt
+
     - name: Identify Changed Directories
       if: ${{ github.event_name == 'pull_request' }}
       id: set_changed_dir
