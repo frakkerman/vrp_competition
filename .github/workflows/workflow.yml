@@ -1,6 +1,16 @@
 name: Test VRP Solutions
 
-on: [pull_request]
+on:
+  pull_request:
+    paths:
+      - 'Groups/**'
+      - 'Instance/Test/**'
+  workflow_dispatch:
+    inputs:
+      group_number:
+        description: 'Group Number (e.g., Group1)'
+        required: true
+        default: 'Group1'
 
 jobs:
   test-solutions:
@@ -13,24 +23,27 @@ jobs:
         fetch-depth: 0  # Important to fetch all history for git diff
 
     - name: Identify Changed Directories
+      if: ${{ github.event_name == 'pull_request' }}
       id: set_changed_dir
       run: |
         CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^Groups/' | cut -d'/' -f2 | uniq)
         echo "Changed directories: $CHANGED_DIRS"
-        if [ -n "$CHANGED_DIRS" ]; then
-          echo "CHANGED_DIRS=$CHANGED_DIRS" >> $GITHUB_ENV
-        fi
+        echo "CHANGED_DIRS=$CHANGED_DIRS" >> $GITHUB_ENV
+
+    - name: Set group number for manual trigger
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      run: echo "CHANGED_DIRS=${{ github.event.inputs.group_number }}" >> $GITHUB_ENV
 
     - name: Run tests on group's submission
       run: |
         if [ -z "${CHANGED_DIRS}" ]; then
-          echo "No group directories have changed."
+          echo "No group directories have been specified."
           exit 0
         fi
         IFS=' ' read -r -a DIR_ARRAY <<< "${CHANGED_DIRS}"
         for DIR in "${DIR_ARRAY[@]}"
         do
-          python .github/run_tests.py Groups/$DIR
+          python .github/tests.py Groups/$DIR
         done
 
 
