@@ -28,7 +28,7 @@ def run_test_for_group(group_dir, instances_dir='Instances/Test'):
     group_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(group_module)
 
-    instance_path = '../Instances/Test/X-n101-k25.vrp'
+    instance_path = 'Instances/Test/X-n101-k25.vrp'
 
     print(f"Testing {group_dir} with instance {instance_path}...")
     # Read the instance using vrplib
