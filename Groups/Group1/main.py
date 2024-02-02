@@ -23,14 +23,14 @@ def main(instance):
     # For this test, we provide the solution. Note that we expect you to provide us with the code that obtains the
     # solution, i.e., just providing solution files is not enough. The solution returned only requires the routes and
     # sequence of visits, e.g., costs of routes do not need to be included as we calculate them ourselves
-    solution = vrplib.read_solution("../Instances/Test/Sol/X-n101-k25.sol")
+    solution = vrplib.read_solution("Instances/Test/Sol/X-n101-k25.sol")
 
     # see vrplib documentation for some reading and writing tools
 
     return solution
 
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     # Read VRPLIB formatted instances, here you can read any instance you want
-    instance = vrplib.read_instance("../Instances/Test/X-n101-k25.vrp")
-    sol = main(instance)
+    #instance = vrplib.read_instance("../Instances/Test/X-n101-k25.vrp")
+    #sol = main(instance)
