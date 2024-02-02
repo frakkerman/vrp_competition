@@ -4,7 +4,7 @@ import scipy
 import pandas as pd
 
 # These are the libraries we provide by default. If you want to use different Python libraries:
-# please let us know so that we can add those to the competition environment.
+# please let us know so that we can check if we can add those to the competition environment.
 # Note: importing a library that is not listed above will result in an error when submitting your code
 
 

@@ -4,7 +4,6 @@ on:
   pull_request:
     paths:
       - 'Groups/**'
-      - '../Instances/Test/**'
   workflow_dispatch:
     inputs:
       group_number:
@@ -38,6 +37,9 @@ jobs:
         echo "Changed directories: $CHANGED_DIRS"
         echo "CHANGED_DIRS=$CHANGED_DIRS" >> $GITHUB_ENV
 
+    - name: Debug - Show Changed Directories
+      run: 'echo "Changed Directories: ${CHANGED_DIRS}"'
+
     - name: Set group number for manual trigger
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: echo "CHANGED_DIRS=${{ github.event.inputs.group_number }}" >> $GITHUB_ENV
@@ -53,5 +55,3 @@ jobs:
         do
           python .github/tests.py Groups/$DIR
         done
-
-
