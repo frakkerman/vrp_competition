@@ -99,6 +99,7 @@ def update_leaderboard(readme_path, new_entry):
     # Write updated content back to README
     with open(readme_path, 'w', encoding='utf-8') as file:
         file.write(updated_content)
+    print('Finished, results (if applicable) written to leaderboard')
 
 
 def parse_solution(solution_dict):

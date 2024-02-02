@@ -10,14 +10,14 @@ Steps from zero to hero (a submission):
 
 0. [Make a GitHub account if you do not have this yet]
 1. Clone this repository.
-2. Make your own branch, called 'Group<>', with your group number between the brackets, e.g., 'Group1', all next steps assume you make adaptation to your own branch.
+2. Make your own branch, called 'Group<>', with your group number between the brackets, e.g., 'Group1', all next steps assume you make adaptations to your own branch.
 3. Make a new subfolder in the `Groups` folder, also called 'Group<>', so that the path to this folder is called `Groups/Group<>`. You can only work in this folder.
 4. Copy the template code from the folder `GroupsTemplate` to your new folder
 5. Have a look at the instruction in `main.py`, note that the file is by default set for running locally on your own PC. If you submit your code for the competition you will need to adapt your code according to the instructions.
 6. As soon as you have programmed a working solution, you can submit your code to the leaderboard:
-   7. Commit all your code
-   8. Push your committed code to your own branch
-   9. Make a Pull request (Best done on GitHub.com)
+   1. Commit all your code
+   2. Push your committed code to your own branch
+   3. Make a Pull request (Best done on GitHub.com)
 
 ### Some remarks
 * We recommend the use of PyCharm or Visual Studio Code, as those IDEs make the use of Git easier. But you can also use any other IDE using command line arguments for Git.
