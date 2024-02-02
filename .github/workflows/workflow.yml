@@ -37,8 +37,17 @@ jobs:
         echo "Changed directories: $CHANGED_DIRS"
         echo "CHANGED_DIRS=$CHANGED_DIRS" >> $GITHUB_ENV
 
-    - name: Debug - Show Changed Directories
-      run: 'echo "Changed Directories: ${CHANGED_DIRS}"'
+    - name: Show git diff output
+      if: ${{ github.event_name == 'pull_request' }}
+      run: |
+        git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+
+    - name: Show raw CHANGED_DIRS before setting environment variable
+      if: ${{ github.event_name == 'pull_request' }}
+      run: |
+        CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^Groups/' | cut -d'/' -f2 | uniq)
+        echo "Raw CHANGED_DIRS: $CHANGED_DIRS"
+
 
     - name: Set group number for manual trigger
       if: ${{ github.event_name == 'workflow_dispatch' }}
