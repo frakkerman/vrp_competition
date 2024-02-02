@@ -37,7 +37,7 @@ def main(instance):
     # students should implement logic to generate the solution, so it is not enough to just provide the solution file
     # NOTE: please remove all loading, writing, and print statements from your submission code, i.e., remove the
     # line below, since it will yield an error on the submission platform since the provided path is not recognized
-    solution = vrplib.read_solution("../Instances/Test/Sol/X-n101-k25.sol")
+    solution = vrplib.read_solution("../../Instances/Test/Sol/X-n101-k25.sol")
     # Example operation on the solution
     print(solution.keys())
 
@@ -49,7 +49,7 @@ def main(instance):
 # but will yield errors when submitting
 
 
-if __name__ == "__main__":
-    # Read VRPLIB formatted instances, here you can read any instance you want locally
-    instance = vrplib.read_instance("../../Instances/Test/X-n101-k25.vrp")
-    sol = main(instance)
+# if __name__ == "__main__":
+#     # Read VRPLIB formatted instances, here you can read any instance you want locally
+#     instance = vrplib.read_instance("../../Instances/Test/X-n101-k25.vrp")
+#     sol = main(instance)
