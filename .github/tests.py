@@ -1,4 +1,5 @@
 import os
+import sys
 import importlib.util
 import vrplib
 import time
@@ -58,6 +59,9 @@ def update_leaderboard(readme_path, new_entry):
         new_score = float(new_entry['Score'])
         if new_score < existing_score:
             existing_entry.update(new_entry)
+        # do not allow 2 submissions on same day, so make all entries invalid
+        if existing_entry['Date'] == new_entry['Date']:
+            existing_entry['Passed'] = '❌'
     else:
         # Append new entry as a dictionary if the group is not in the leaderboard
         entries.append(new_entry)
@@ -79,7 +83,7 @@ def update_leaderboard(readme_path, new_entry):
     # Combine the sorted passed_entries with failed_entries
     entries = passed_entries + failed_entries
 
-    for rank, entry in enumerate(entries[1:], start=1):  # Start from the second entry
+    for rank, entry in enumerate(entries, start=1):  # Start from the second entry
         entry['Rank'] = rank
 
     # Prepare the Markdown table headers and rows
@@ -157,7 +161,8 @@ def calculate_weighted_score(distance, runtime, max_distance, max_runtime):
     return weighted_score
 
 
-def run_test_for_group(group_dir, instances_dir='../Instances/Test'):  # for local debug: '../Instances/Test'
+
+def run_test_for_group(group_dir, instances_dir='Instances/Test'):  # local debug: '../Instances/Test'
     """
     Run the specified group's main.py against all instances in the instances directory.
 
@@ -181,8 +186,8 @@ def run_test_for_group(group_dir, instances_dir='../Instances/Test'):  # for loc
     group_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(group_module)
 
-    # instance_path = 'Instances/Test/X-n101-k25.vrp'# for GitHub
-    instance_path = '../Instances/Test/X-n101-k25.vrp'  # local debug
+    instance_path = 'Instances/Test/X-n101-k25.vrp'  # for GitHub
+    #instance_path = '../Instances/Test/X-n101-k25.vrp'  # local debug
 
     test_passed = False
 
@@ -228,7 +233,7 @@ def run_test_for_group(group_dir, instances_dir='../Instances/Test'):  # for loc
     output = {
         "GroupNumber": group_dir.split('/')[-1],  # Example group number
         "Passed": '✅' if test_passed else '❌',
-        "Score": score,
+        "Score": str(score),
         "Runtime": f"{runtime:.2f}s"
     }
     print(json.dumps(output))
@@ -237,14 +242,13 @@ def run_test_for_group(group_dir, instances_dir='../Instances/Test'):  # for loc
 
     update_leaderboard(readme_path, output)
 
-
 if __name__ == "__main__":
-    #The script expects the full path to the group's directory as the first command-line argument
-    # if len(sys.argv) < 2:
-    #     print("Usage: python run_tests.py <FullPathToGroupDir>")
-    #     sys.exit(1)
-    #
-    # group_dir = sys.argv[1]  # Full path to the group's directory is expected
+    # The script expects the full path to the group's directory as the first command-line argument
+    if len(sys.argv) < 2:
+        print("Usage: python run_tests.py <FullPathToGroupDir>")
+        sys.exit(1)
 
-    group_dir = '../Groups/Group1' # local debug, comment on GitHub
+    group_dir = sys.argv[1]  # Full path to the group's directory is expected
+
+    #group_dir = '../Groups/Group1' # For local debug, comment on GitHub
     run_test_for_group(group_dir)
