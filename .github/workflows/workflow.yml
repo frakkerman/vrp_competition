@@ -3,7 +3,7 @@ name: Test VRP Solutions
 on:
   pull_request:
     paths:
-      - '../Groups/**'
+      - 'Groups/**' #only trigger workflow when pull request changes this folder
   workflow_dispatch:
     inputs:
       group_number:
@@ -30,12 +30,13 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Identify Changed Directories
-      if: ${{ github.event_name == 'pull_request' }}
       id: set_changed_dir
       run: |
         CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^Groups/' | cut -d'/' -f2 | uniq)
         echo "Changed directories: $CHANGED_DIRS"
-        echo "CHANGED_DIRS=$CHANGED_DIRS" >> $GITHUB_ENV
+        if [ -n "$CHANGED_DIRS" ]; then
+          echo "CHANGED_DIRS=$CHANGED_DIRS" >> $GITHUB_ENV
+        fi
 
     - name: Show git diff output
       if: ${{ github.event_name == 'pull_request' }}
