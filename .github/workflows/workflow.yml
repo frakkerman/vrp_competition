@@ -3,7 +3,7 @@ name: Test VRP Solutions
 on:
   pull_request:
     paths:
-      - 'Groups/**'
+      - '../Groups/**'
   workflow_dispatch:
     inputs:
       group_number:
