@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       changed-dir: ${{ steps.set_changed_dir.outputs.changed-dir }}
+    timeout-minutes: 6 # Set your desired time limit in minutes
     steps:
     - uses: actions/checkout@v2
       with:
@@ -62,3 +63,13 @@ jobs:
         do
           python .github/tests.py Groups/$DIR
         done
+
+    - name: Update README with Leaderboard
+      run: |
+        # Assuming parse_results.py parses the test script output and updates README.md
+        python .github/parse_results.py
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Update leaderboard" -a || echo "No changes to commit"
+        git push
