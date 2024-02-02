@@ -42,7 +42,7 @@ Steps from zero to hero (a submission):
 * The group that is first on the leaderboard in round 2 get 0.5 bonus-points on Assignment 2
 * The winning groups present their approach (5 minutes) in the lecture after the competition ended.
 
-# Previsional Leaderboard
+# Provisional Leaderboard
 
 No rights can be derived from below leaderboard, at the end of the competition the definite leaderboard will be published by us. Note that a lower score is better and that `Passed` indicates if your solution ran without bugs and finished within the timelimit of 5 minutes.
 
