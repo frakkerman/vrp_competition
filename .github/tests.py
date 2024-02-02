@@ -168,7 +168,7 @@ def run_test_for_group(group_dir, instances_dir='Instances/Test'):  # local debu
     Run the specified group's main.py against all instances in the instances directory.
 
     Parameters:
-    - group_dir (str): The directory of the group, e.g., 'Groups/Group1'.
+    - group_dir (str): The directory of the group, e.g., 'Groups/Group99'.
     - instances_dir (str): The directory where instance files are located.
     """
     # Ensure the specified directories exist
@@ -251,5 +251,5 @@ if __name__ == "__main__":
 
     group_dir = sys.argv[1]  # Full path to the group's directory is expected
 
-    #group_dir = '../Groups/Group1' # For local debug, comment on GitHub
+    #group_dir = '../Groups/Group99' # For local debug, comment on GitHub
     run_test_for_group(group_dir)
