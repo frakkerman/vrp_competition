@@ -63,13 +63,3 @@ jobs:
         do
           python .github/tests.py Groups/$DIR
         done
-
-    - name: Update README with Leaderboard
-      run: |
-        # Assuming parse_results.py parses the test script output and updates README.md
-        python .github/parse_results.py
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add README.md
-        git commit -m "Update leaderboard" -a || echo "No changes to commit"
-        git push
