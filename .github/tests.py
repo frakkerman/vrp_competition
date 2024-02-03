@@ -239,7 +239,8 @@ def run_test_for_group(group_dir, instances_dir='Instances/Test'):  # local debu
     }
     print(json.dumps(output))
 
-    readme_path = '../README.md'
+    #readme_path = '../README.md'  # local
+    readme_path = 'README.md'  # github
 
     update_leaderboard(readme_path, output)
 
@@ -251,5 +252,5 @@ if __name__ == "__main__":
 
     group_dir = sys.argv[1]  # Full path to the group's directory is expected
 
-    #group_dir = '../Groups/TestGroup' # For local debug, comment on GitHub
+    #group_dir = '../Groups/TestGroup' # For local debug, comment before push to GitHub
     run_test_for_group(group_dir)
