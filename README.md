@@ -2,7 +2,7 @@
 
 Welcome to the TLM Vehicle Routing Competition, linked to Assignment 2 of the TLM course!
 
-In this competition, you can earn bonus points by designing well-performing algorithms for the vehicle routing problem. All communication of this competition is via GitHub. If you have questions are comments related to the competition, please open an `Issue` in this GitHub repository.
+In this competition, you can earn bonus points by designing well-performing algorithms for the vehicle routing problem. All communication of this competition goes via GitHub Issues. If you have questions are comments related to the competition, please open an `Issue` in this GitHub repository.
 
 ## Making the code work
 
@@ -13,11 +13,12 @@ Steps from zero to hero (a submission):
 2. Make your own branch, called 'Group<>', with your group number between the brackets, e.g., 'Group1', all next steps assume you make adaptations to your own branch.
 3. Make a new subfolder in the `Groups` folder, also called 'Group<>', so that the path to this folder is called `Groups/Group<>`. You can only work in this folder.
 4. Copy the template code from the folder `GroupsTemplate` to your new folder
-5. Have a look at the instruction in `main.py`, note that the file is by default set for running locally on your own PC. If you submit your code for the competition you will need to adapt your code according to the instructions.
+5. Have a look at the instructions in `main.py`, note that the file is by default set for running locally on your own PC. If you submit your code for the competition you will need to adapt your code according to the instructions.
 6. As soon as you have programmed a working solution, you can submit your code to the leaderboard:
-   1. Commit all your code
+   1. Commit all your code locally
    2. Push your committed code to your own branch
    3. Make a Pull request (Best done on GitHub.com)
+   4. A Pull request will automatically trigger the competition system to run your code. Note that it might take some time before the leaderboard is updated with your score.
 
 ### Some remarks
 * We recommend the use of PyCharm or Visual Studio Code, as those IDEs make the use of Git easier. But you can also use any other IDE using command line arguments for Git.
@@ -26,15 +27,17 @@ Steps from zero to hero (a submission):
 
 ## Competion rules and guidelines
 
-1. You can only submit new code once per day, in order to limit computation times. The system checks this: A second submission on a day will result in ALL your submissions for that day to become invalid.
-2. Please do not upload code with bugs.
+1. We trust you to do your best to learn how to design well-performing algorithms by yourself, without cheating. Note that we will check the code of the winning group and some randomly selected groups.
+2. You can only submit new code once per day, in order to limit computation times. The system checks this: A second submission on a day will result in ALL your submissions for that day to become invalid.
 3. You can only use the Python libraries listed in `main.py`, consult with us if you like to use other libraries.
-4. We trust you to do your best to learn how to design well-performing algorithms by yourself, without cheating. Note that we will check the code of the winning group and some randomly selected groups
-5. The competition consist of 2 rounds, with in each round a winning team.
-6. Scores are determined based on the least distance (90% weight in round 1, 60% weight in round 2) and computational times (10% in round 1, 40% in round 2)
-7. We limit the computational time to 5 minutes per day per group. If you did not find a solution within 5 minutes, your submission is invalid.
-8. Only your best scoring solution is shown on the leaderboard. 
-9. No rights can be derived from this information and the leaderboard at any moment in time.
+4. Please do not upload code with bugs.
+5. All communication concerning the competition goes via GitHub Issues. Please do not send e-mails to any of us regarding the competition.
+6. The competition consist of 2 rounds, with in each round a winning team.
+7. Scores are determined based on the solutions with the least distance (90% weight in round 1, 60% weight in round 2) and computational times (10% in round 1, 40% in round 2)
+8. We limit the computational time to 5 minutes per day per group. If you did not find a solution within 5 minutes, your submission is invalid.
+9. Only your best scoring solution is shown on the leaderboard. 
+10. After submitting, it might take some time before your score appears on the leaderboard, depending on the length of the queue of submissions.
+11. No rights can be derived from this information and the leaderboard at any moment in time.
 
 ## Compettion rewards
 
