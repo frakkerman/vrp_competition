@@ -2,6 +2,7 @@
 
 Welcome to the TLM Vehicle Routing Competition, linked to Assignment 2 of the TLM course!
 
+test
 
 In this competition, you can earn bonus points by designing well-performing algorithms for the vehicle routing problem.
 All communication of this competition goes via GitHub Issues.
