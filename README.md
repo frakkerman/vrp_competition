@@ -2,7 +2,7 @@
 
 Welcome to the TLM Vehicle Routing Competition, linked to Assignment 2 of the TLM course!
 
-In this competition, you can earn bonus points by designing well-performing algorithms for the vehicle routing problem. All communication of this competition goes via GitHub Issues. If you have questions are comments related to the competition, please open an `Issue` in this GitHub repository.
+In this competition, you can earn bonus points by designing well-performing algorithms for the vehicle routing problem. All communication of this competition goes via GitHub Issues in **THIS** repository. If you have questions or comments related to the competition, please open an `Issue` in this GitHub repository.
 
 ## Making the code work
 
@@ -21,23 +21,23 @@ Steps from zero to hero (a submission):
    4. A Pull request will automatically trigger the competition system to run your code. Note that it might take some time before the leaderboard is updated with your score.
 
 ### Some remarks
-* We recommend the use of PyCharm or Visual Studio Code, as those IDEs make the use of Git easier. But you can also use any other IDE using command line arguments for Git.
-* We use the `VRPLIB` standard for instances and routes. So you have a standarized way to read instances and write solutions which you should follow.
+* We use the `VRPLIB` standard for instances and routes. So you have a standarized way to read instances and write solutions which you can follow.
 * Instances are provided in the `Instances` folder.
 
 ## Competion rules and guidelines
 
 1. We trust you to do your best to learn how to design well-performing algorithms by yourself, without cheating. Note that we will check the code of the winning group and some randomly selected groups.
-2. You can only submit new code once per day, in order to limit computation times. The system checks this: A second submission on a day will result in ALL your submissions for that day to become invalid.
+2. If you submit code before 12:00 midnight, your solution will run and the next day the leaderboard will be updated with your score.
 3. You can only use the Python libraries listed in `main.py`, consult with us if you like to use other libraries.
 4. Please do not upload code with bugs.
 5. All communication concerning the competition goes via GitHub Issues. Please do not send e-mails to any of us regarding the competition.
 6. The competition consist of 2 rounds, with in each round a winning team.
 7. Scores are determined based on the solutions with the least distance (90% weight in round 1, 60% weight in round 2) and computational times (10% in round 1, 40% in round 2)
-8. We limit the computational time to 5 minutes per day per group. If you did not find a solution within 5 minutes, your submission is invalid.
+8. We limit the computational time to 15 minutes per day per group. If you did not find a solution within 15 minutes, your submission is invalid.
 9. Only your best scoring solution is shown on the leaderboard. 
 10. After submitting, it might take some time before your score appears on the leaderboard, depending on the length of the queue of submissions.
-11. No rights can be derived from this information and the leaderboard at any moment in time.
+11. Code runs on a virtual machine with an Intel Xeon Gold 5118 CPU at 2.30GHz and 4GB RAM.
+12. No rights can be derived from this information and the leaderboard at any moment in time.
 
 ## Compettion rewards
 
@@ -47,7 +47,7 @@ Steps from zero to hero (a submission):
 
 # Provisional Leaderboard
 
-No rights can be derived from below leaderboard, at the end of the competition the definite leaderboard will be published by us. Note that a lower score is better and that `Passed` indicates if your solution ran without bugs and finished within the timelimit of 5 minutes.
+No rights can be derived from below leaderboard, at the end of the competition the definite leaderboard will be published by us. Note that a lower score is better and that `Passed` indicates if your solution ran without bugs and finished within the timelimit of 15 minutes.
 
 <!-- LEADERBOARD_START -->
 | Rank | Date | GroupNumber | Passed | Score | Runtime |
