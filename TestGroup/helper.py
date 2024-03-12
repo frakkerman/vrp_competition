@@ -1,7 +1,8 @@
-import numpy as np
 import random
+from math import sqrt
 
-# an example file, you can use more submodules like this to keep your code readable, but import them in main.py
+
+# a helper module, you can use more submodules like this to keep your code readable, but do import them in main.py
 
 
 def read_instance(filename):
@@ -75,7 +76,9 @@ def parse_instance(instance):
 def check_vehicle_capacity(solution, instance_dict, vehicle_capacity):
     for route in solution['routes']:
         total_demand = 0
-        for location_id in route[1:-1]:  # Exclude the depots at the start and end
+        # Adjusted to handle new format
+        for visit in route[1:-1]:  # Exclude the depots at the start and end
+            location_id = visit['node_id']
             if location_id in instance_dict['pick_up_locations']:
                 total_demand += instance_dict['pick_up_locations'][location_id]['demand']
             if total_demand > vehicle_capacity:
@@ -88,7 +91,8 @@ def check_start_end_at_depot(solution, instance_dict):
     depot_ids = {depot_detail['id'] for depot_detail in instance_dict['depots'].values()}
 
     for route in solution['routes']:
-        start_depot_id, end_depot_id = route[0], route[-1]
+        # Adjusted to handle new format
+        start_depot_id, end_depot_id = route[0]['node_id'], route[-1]['node_id']
 
         # Check if the start and end depot IDs are in the set of depot IDs
         if start_depot_id not in depot_ids or end_depot_id not in depot_ids:
@@ -105,17 +109,29 @@ def check_pickup_before_delivery(solution, instance_dict):
 
     for route in solution['routes']:
         visited_pickups = set()  # Track visited pickups
-        for location_id in route:
+        completed_deliveries = set()  # Track completed deliveries
+
+        for visit in route:
+            location_id = visit['node_id']
+
             # Check if this location is a delivery location
             if location_id in instance_dict['delivery_locations']:
-                # Calculate the expected pickup ID for this delivery
                 expected_pickup_id = location_id - total_customers
-                # Check if the corresponding pickup has been visited
-                if expected_pickup_id not in visited_pickups:
+                # Check if the corresponding pickup has been visited and is not yet delivered
+                if expected_pickup_id not in visited_pickups or expected_pickup_id in completed_deliveries:
                     return False
+                else:
+                    # Mark the delivery as completed
+                    completed_deliveries.add(expected_pickup_id)
+
             elif location_id in instance_dict['pick_up_locations']:
                 # Mark this pickup as visited
                 visited_pickups.add(location_id)
+
+        # After processing a route, ensure all visited pickups have been delivered
+        if not all(pickup in completed_deliveries for pickup in visited_pickups):
+            return False
+
     return True
 
 
@@ -130,10 +146,68 @@ def check_solution_feasibility(solution, instance_dict):
     if not check_number_of_trucks(solution, number_of_trucks):
         print("Warning: Number of trucks exceeded.")
     if not check_pickup_before_delivery(solution, instance_dict):
-        print("Warning: Delivery location visited before corresponding pickup location.")
+        print("Warning: Delivery location visited before corresponding pickup location or only picked up and not delivered.")
 
 
-def generate_random_routes_from_instance(parsed_data, depot_id, min_size=1, max_size=5):
+def calculate_euclidean_distance(x1, y1, x2, y2):
+    """Calculate the Euclidean distance between two points."""
+    return sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+
+def calculate_euclidean_distance(x1, y1, x2, y2):
+    """Calculate the Euclidean distance between two points."""
+    return ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+
+def total_profit_with_penalties(solution, instance):
+    total_distance = 0
+    total_penalty = 0  # Initialize total penalty for time window violations
+    total_revenue = 0  # Initialize total revenue from sales
+    total_waiting_time_hours = 0  # Initialize total waiting time
+    truck_cost_per_hour = 20
+    truck_speed = 25  # distance units per hour
+    penalty_per_hour = 6  # Euro per hour early or late
+    revenue_per_demand_unit = 50  # Euro per unit of demand
+
+    # Combine pickup and delivery locations for easy access
+    node_data = {**instance['depots'], **instance['pick_up_locations'], **instance['delivery_locations']}
+
+    for route in solution['routes']:
+        current_time = 0  # Start of the day for each route
+        for i in range(len(route) - 1):
+            node_current = route[i]
+            node_next = route[i + 1]
+
+            node_id_current = node_current['node_id']
+            node_id_next = node_next['node_id']
+            waiting_time_hours = node_current['waiting_time'] / 60.0  # Convert waiting time to hours
+            total_waiting_time_hours += waiting_time_hours  # Accumulate total waiting time
+
+            x1, y1 = node_data[node_id_current]['x_coord'], node_data[node_id_current]['y_coord']
+            x2, y2 = node_data[node_id_next]['x_coord'], node_data[node_id_next]['y_coord']
+            travel_time_hours = calculate_euclidean_distance(x1, y1, x2, y2) / truck_speed
+
+            current_time += travel_time_hours + waiting_time_hours
+            service_start_time = current_time
+
+            if service_start_time < node_data[node_id_next]['time_window_start']:
+                total_penalty += (node_data[node_id_next]['time_window_start'] - service_start_time) * penalty_per_hour
+            elif service_start_time > node_data[node_id_next]['time_window_end']:
+                total_penalty += (service_start_time - node_data[node_id_next]['time_window_end']) * penalty_per_hour
+
+            # If the current node is a pickup location, calculate revenue
+            if node_id_current in instance['pick_up_locations']:
+                demand = node_data[node_id_current]['demand']
+                total_revenue += demand * revenue_per_demand_unit
+
+            total_distance += travel_time_hours * truck_speed
+
+    total_time_hours = (total_distance / truck_speed) + total_waiting_time_hours
+    total_cost = (total_time_hours * truck_cost_per_hour) + total_penalty
+
+    return total_revenue-total_cost  # return profit
+
+
+def generate_random_routes_from_instance(parsed_data, depot_id, min_size=1, max_size=5, max_waiting_time=10):
     # Extract IDs of all pickup and delivery locations
     pickup_ids = list(parsed_data['pick_up_locations'].keys())
     delivery_ids = list(parsed_data['delivery_locations'].keys())
@@ -149,8 +223,17 @@ def generate_random_routes_from_instance(parsed_data, depot_id, min_size=1, max_
         # Ensure the size is within the remaining indices and account for the depot
         size = random.randint(min_size, min(max_size, len(indices)))
 
-        # Create a route starting and ending at the depot
-        route = [depot_id] + indices[:size] + [depot_id]
+        # Initialize the route with the depot as the starting point
+        route = [{"node_id": depot_id, "waiting_time": 0}]
+
+        # Add nodes to the route with random waiting times
+        for node_id in indices[:size]:
+            waiting_time = 0
+            route.append({"node_id": node_id, "waiting_time": waiting_time})
+
+        # Add the depot as the ending point of the route
+        route.append({"node_id": depot_id, "waiting_time": 0})
+
         routes.append(route)
 
         # Update the remaining indices

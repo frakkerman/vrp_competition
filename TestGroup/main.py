@@ -26,8 +26,9 @@ def main(instance):
         solution (vrplib): solution in vrplib format.
     """
 
-    print('\nPlease change the folder name "TestGroup" into your own group name, e.g., "Group1, '
-          'this way we identify you in the competition"\n')
+    print('\nPlease change the folder name "TestGroup" into your own group name, e.g., "Group1", '
+          'this way we identify you in the competition, note that we only accept the naming convention "GroupX",'
+          'other names are rejected by the system\n')
 
     # parse the instance into a dictionary
     instance_dict = helper.parse_instance(instance)
@@ -46,18 +47,23 @@ def main(instance):
     # check feasibility of solution
     helper.check_solution_feasibility(solution, instance_dict)
 
+    # find costs of solution
+    profit = helper.total_profit_with_penalties(solution, instance_dict)
+    print(f'profit: {profit}')
+
     # you should implement logic to generate the solution, it is not enough to just provide the solution sequence!
-    # on the competition server, we will test your solution code on different (secret) instances
+    # on the competition server, we will test your solution code on different (secret) instances that are of similar
+    # size as the 3 instances provided. The computation time limit is 15 minutes in total for solving all 3 instances.
 
-    return solution  # you need to return a solution in this exact (vrplib) format
+    print("RESULT:", solution)  # you need to return a solution in this exact (vrplib) format, do not change this!
 
 
-# please keep the below code as-is, you can change the default "instance_path" to your liking. We provide example
+# please keep the below code as-is, you can only change the default "instance_path" to your liking. We provide example
 # instances in the "Instances" folder
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run code.")
-    parser.add_argument("--instance_path", default='Instances/lrc33.txt', type=str,
+    parser.add_argument("--instance_path", default='Instances/lrc53A.txt', type=str,
                         help="Path to a specific instance")
 
     args = parser.parse_args()
