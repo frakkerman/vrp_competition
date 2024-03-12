@@ -154,10 +154,6 @@ def calculate_euclidean_distance(x1, y1, x2, y2):
     return sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 
 
-def calculate_euclidean_distance(x1, y1, x2, y2):
-    """Calculate the Euclidean distance between two points."""
-    return ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
-
 def total_profit_with_penalties(solution, instance):
     total_distance = 0
     total_penalty = 0  # Initialize total penalty for time window violations
