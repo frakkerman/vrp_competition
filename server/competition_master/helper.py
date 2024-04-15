@@ -81,6 +81,8 @@ def check_vehicle_capacity(solution, instance_dict, vehicle_capacity):
             location_id = visit['node_id']
             if location_id in instance_dict['pick_up_locations']:
                 total_demand += instance_dict['pick_up_locations'][location_id]['demand']
+            elif location_id in instance_dict['delivery_locations']:
+                total_demand += instance_dict['delivery_locations'][location_id]['demand']
             if total_demand > vehicle_capacity:
                 return False
     return True
@@ -133,6 +135,19 @@ def check_pickup_before_delivery(solution, instance_dict):
             return False
 
     return True
+    
+def check_no_duplicate_visits(solution):
+    visited_nodes = set()  # Track visited nodes across all routes
+
+    for route in solution['routes']:
+        for visit in route[1:-1]:  # Exclude the depots at the start and end
+            node_id = visit['node_id']
+            # Check if this node has already been visited in any route
+            if node_id in visited_nodes:
+                return False  # Node visited more than once, fail the check
+            else:
+                visited_nodes.add(node_id)
+    return True  # All nodes visited at most once across all routes, pass the check
 
 
 def check_solution_feasibility(solution, instance_dict):
@@ -146,7 +161,8 @@ def check_solution_feasibility(solution, instance_dict):
     if not check_number_of_trucks(solution, number_of_trucks):
         print("Warning: Number of trucks exceeded.")
     if not check_pickup_before_delivery(solution, instance_dict):
-        print("Warning: Delivery location visited before corresponding pickup location or only picked up and not delivered.")
+        print("Warning: Delivery location visited before corresponding pickup location.")
+    return
 
 
 def calculate_euclidean_distance(x1, y1, x2, y2):
@@ -155,6 +171,13 @@ def calculate_euclidean_distance(x1, y1, x2, y2):
 
 
 def total_profit_with_penalties(solution, instance):
+    """"
+    NOTE: we should change the profit calculation such that:
+    -Costs are higher, and it becomes interesting to not serve customers
+    -Penalties are higher such that it becomes interesting to optimize the time windows
+    -The waiting time at the depot is not included in the waiting time, to start later delivery
+    -Make clear that waiting time is in minutes and is a decision variable
+    """
     total_distance = 0
     total_penalty = 0  # Initialize total penalty for time window violations
     total_revenue = 0  # Initialize total revenue from sales

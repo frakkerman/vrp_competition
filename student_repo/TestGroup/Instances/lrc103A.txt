@@ -7,17 +7,17 @@
 /* Cardinality of depots */
 3
 /* Total number of trucks */
-3	
+50
 /* Capacity of trucks */
 200
 /* Maximum working hours */
-8
+24
 /* Revenue of selling an order [e/kg] */
 50
 /* Depots */
-1	40	50	0	0	8
-2	27	62	0	0	8
-3	73	17	0	0	8
+1	40	50	0	0	24
+2	27	62	0	0	24
+3	73	17	0	0	24
 /* Pick up locations */					
 4	33	78	20	1	9
 5	10	137	30	0	8

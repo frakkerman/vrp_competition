@@ -23,7 +23,7 @@ def main(instance):
      Args:
         instance : instance
     Returns:
-        solution (vrplib): solution in vrplib format.
+        solution: solution in vrplib format.
     """
 
     print('\nPlease change the folder name "TestGroup" into your own group name, e.g., "Group1", '

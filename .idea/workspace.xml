@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="533de920-1e29-4719-b406-df48bd90d44a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CODEOWNERS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaderboard/CODEOWNERS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaderboard/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/repos/clone_assignment_repos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/repos/run_output/central_results.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_repo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/student_repo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGroup/Instances/lrc103A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/student_repo/TestGroup/Instances/lrc103A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGroup/Instances/lrc303A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/student_repo/TestGroup/Instances/lrc303A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGroup/Instances/lrc53A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/student_repo/TestGroup/Instances/lrc53A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGroup/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_repo/TestGroup/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGroup/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_repo/TestGroup/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestGroup/sim_heur.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/student_repo/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Freeze Requirements File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;frakkerman&quot;
+  }
+}</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9f7a2d79-6d75-4702-8e53-5f0e971320b6" />
+        <option name="url" value="https://github.com/frakkerman/vrp_competition.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2biiWG3u7jiYuz1sAph4Sa3duMf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.helper.executor": "Debug",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/AkkermanFR/PycharmProjects/vrp_competition",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition" />
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\TestGroup\Instances" />
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\Groups\Group99" />
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\Groups\Group1" />
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\Groups\Group2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\server" />
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\leaderboard" />
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\server\repos\run_output" />
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\server\repos" />
+      <recent name="C:\Users\AkkermanFR\PycharmProjects\vrp_competition\server\competition_master" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="533de920-1e29-4719-b406-df48bd90d44a" name="Changes" comment="" />
+      <created>1706704329476</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706704329476</updated>
+      <workItem from="1706704330878" duration="7521000" />
+      <workItem from="1706781895831" duration="97000" />
+      <workItem from="1706789023486" duration="5905000" />
+      <workItem from="1706861866676" duration="20515000" />
+      <workItem from="1706957822641" duration="2148000" />
+      <workItem from="1707045552309" duration="627000" />
+      <workItem from="1707145028634" duration="7000" />
+      <workItem from="1709549554920" duration="5752000" />
+      <workItem from="1709637617490" duration="2676000" />
+      <workItem from="1709890385855" duration="6211000" />
+      <workItem from="1710161837201" duration="6692000" />
+      <workItem from="1710186290199" duration="423000" />
+      <workItem from="1710228976933" duration="8196000" />
+      <workItem from="1710833966663" duration="646000" />
+      <workItem from="1711453380385" duration="2011000" />
+      <workItem from="1711524824905" duration="864000" />
+      <workItem from="1712305735922" duration="634000" />
+      <workItem from="1712578523851" duration="49000" />
+      <workItem from="1713165811432" duration="4370000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1706715842749</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706715842749</updated>
+    </task>
+    <task id="LOCAL-00002" summary="workflow">
+      <option name="closed" value="true" />
+      <created>1706716218319</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706716218319</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added group file">
+      <option name="closed" value="true" />
+      <created>1706716328242</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706716328242</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added group file">
+      <option name="closed" value="true" />
+      <created>1706716431501</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706716431501</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added group file">
+      <option name="closed" value="true" />
+      <created>1706716629025</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706716629025</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new">
+      <option name="closed" value="true" />
+      <created>1706716722812</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706716722812</updated>
+    </task>
+    <task id="LOCAL-00007" summary="new">
+      <option name="closed" value="true" />
+      <created>1706789120128</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706789120128</updated>
+    </task>
+    <task id="LOCAL-00008" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706789314284</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706789314284</updated>
+    </task>
+    <task id="LOCAL-00009" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706789556848</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706789556848</updated>
+    </task>
+    <task id="LOCAL-00010" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706789662753</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706789662753</updated>
+    </task>
+    <task id="LOCAL-00011" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706789781086</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706789781086</updated>
+    </task>
+    <task id="LOCAL-00012" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706791869773</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706791869773</updated>
+    </task>
+    <task id="LOCAL-00013" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706791998593</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706791998593</updated>
+    </task>
+    <task id="LOCAL-00014" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706793610601</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706793610601</updated>
+    </task>
+    <task id="LOCAL-00015" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706793698438</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1706793698438</updated>
+    </task>
+    <task id="LOCAL-00016" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706794429253</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1706794429253</updated>
+    </task>
+    <task id="LOCAL-00017" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706794537557</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1706794537557</updated>
+    </task>
+    <task id="LOCAL-00018" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706794625874</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1706794625874</updated>
+    </task>
+    <task id="LOCAL-00019" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706794709681</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1706794709681</updated>
+    </task>
+    <task id="LOCAL-00020" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706862725034</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1706862725034</updated>
+    </task>
+    <task id="LOCAL-00021" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706863092072</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1706863092072</updated>
+    </task>
+    <task id="LOCAL-00022" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706863264729</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1706863264729</updated>
+    </task>
+    <task id="LOCAL-00023" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706863503664</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1706863503664</updated>
+    </task>
+    <task id="LOCAL-00024" summary="workflow update">
+      <option name="closed" value="true" />
+      <created>1706864006350</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1706864006350</updated>
+    </task>
+    <task id="LOCAL-00025" summary="big update">
+      <option name="closed" value="true" />
+      <created>1706886249155</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1706886249155</updated>
+    </task>
+    <task id="LOCAL-00026" summary="bugfix">
+      <option name="closed" value="true" />
+      <created>1706888335927</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1706888335927</updated>
+    </task>
+    <task id="LOCAL-00027" summary="bugfix">
+      <option name="closed" value="true" />
+      <created>1706888470019</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1706888470019</updated>
+    </task>
+    <task id="LOCAL-00028" summary="typos">
+      <option name="closed" value="true" />
+      <created>1706888980421</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1706888980421</updated>
+    </task>
+    <task id="LOCAL-00029" summary="typos">
+      <option name="closed" value="true" />
+      <created>1706889027346</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1706889027346</updated>
+    </task>
+    <task id="LOCAL-00030" summary="typos">
+      <option name="closed" value="true" />
+      <created>1706889074815</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1706889074815</updated>
+    </task>
+    <task id="LOCAL-00031" summary="added codeowner">
+      <option name="closed" value="true" />
+      <created>1706889163383</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1706889163383</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added example group">
+      <option name="closed" value="true" />
+      <created>1706889308329</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1706889308329</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added example group">
+      <option name="closed" value="true" />
+      <created>1706889665023</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1706889665023</updated>
+    </task>
+    <task id="LOCAL-00034" summary="added random solution">
+      <option name="closed" value="true" />
+      <created>1706959368070</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1706959368070</updated>
+    </task>
+    <task id="LOCAL-00035" summary="bugfix">
+      <option name="closed" value="true" />
+      <created>1706959796298</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1706959796298</updated>
+    </task>
+    <task id="LOCAL-00036" summary="bugfix">
+      <option name="closed" value="true" />
+      <created>1706961307858</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1706961307858</updated>
+    </task>
+    <task id="LOCAL-00037" summary="readme update">
+      <option name="closed" value="true" />
+      <created>1707046100267</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1707046100267</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Cleanup">
+      <option name="closed" value="true" />
+      <created>1709638675388</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1709638675388</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Cleanup">
+      <option name="closed" value="true" />
+      <created>1709638783492</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1709638783492</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Cleanup">
+      <option name="closed" value="true" />
+      <created>1709638868775</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1709638868775</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add feasibility check and new instance format">
+      <option name="closed" value="true" />
+      <created>1709898775653</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1709898775653</updated>
+    </task>
+    <task id="LOCAL-00042" summary="add instances, updates">
+      <option name="closed" value="true" />
+      <created>1710249146180</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1710249146180</updated>
+    </task>
+    <task id="LOCAL-00043" summary="add instances, updates">
+      <option name="closed" value="true" />
+      <created>1710251133964</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1710251133964</updated>
+    </task>
+    <task id="LOCAL-00044" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1710251338816</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1710251338816</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="workflow" />
+    <MESSAGE value="added group file" />
+    <MESSAGE value="new" />
+    <MESSAGE value="workflow update" />
+    <MESSAGE value="big update" />
+    <MESSAGE value="typos" />
+    <MESSAGE value="added codeowner" />
+    <MESSAGE value="added example group" />
+    <MESSAGE value="added random solution" />
+    <MESSAGE value="bugfix" />
+    <MESSAGE value="readme update" />
+    <MESSAGE value="Cleanup" />
+    <MESSAGE value="add feasibility check and new instance format" />
+    <MESSAGE value="add instances, updates" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Groups/Group2/main.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/GroupTemplate/main.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/student_repo/TestGroup/helper.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/student_repo/TestGroup/helper.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/student_repo/TestGroup/helper.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/student_repo/TestGroup/helper.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/vrp_competition$main.coverage" NAME="main Coverage Results" MODIFIED="1712305739155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestGroup" />
+    <SUITE FILE_PATH="coverage/vrp_competition$helper.coverage" NAME="helper Coverage Results" MODIFIED="1711454001212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestGroup" />
+    <SUITE FILE_PATH="coverage/vrp_competition$tests.coverage" NAME="tests Coverage Results" MODIFIED="1706959565495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.github" />
+  </component>
+</project>

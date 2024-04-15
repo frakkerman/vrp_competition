@@ -1,23 +1,23 @@
-# TLM Vehicle Routing Competition
+# GitHub Classroom student competition
 
-Welcome to the TLM Vehicle Routing Competition, linked to Assignment 2 of the TLM course!
+This is a repository that includes everything to host a student competition supported by GitHub classroom. This repository was tried, tested, and improved in the course "Transportation & Logistics Management" of the [Industrial Engineering & Management master at the University of Twente](https://www.utwente.nl/en/education/master/programmes/industrial-engineering-management/).
+We ran a vehicle routing problem (VRP) competition. To be precise, we gave the students a pickup-and-delivery problem with soft time windows to solve using heuristics and metaheuristic.
+Students earned bonus points for an assignment in several rounds of the competition. In each round, we had a different focus regarding performance and computational time.
 
-In this competition, you can earn bonus points by designing well-performing algorithms for the vehicle routing problem.
+## Main idea
 
-## Competition rules and guidelines
+You use GitHub classroom to share starter code and example problem instances with students. Every day/week/whatever, you pull all the code of the students at a fixed time to a server. On this server, you run the code of students on secret instances. After running all code, you can calculate scores, e.g., based on profits and computational time. This score calculation is stored in a csv file. This csv file is pushed to a separate leaderboard repository. Here students can see their scores and can delve deeper into error codes related to their own run (if applicable).
 
-1. We trust you to do your best to learn how to design well-performing algorithms by yourself, without cheating. Note that we will check the code of the winning group and some randomly selected groups.
-2. You can only use the Python libraries listed in `main.py`, consult with us if you like to use other libraries.
-3. The competition consist of 2 rounds, with in each round a winning team.
-4. Scores are determined based on the solutions with the highest profit (90% weight in round 1, 40% weight in round 2) and computational times (10% in round 1, 60% in round 2)
-5. We limit the computational time to 15 minutes per day per group. If you did not find a solution within 15 minutes, your submission is invalid.
-6. Only your best scoring solution is shown on the leaderboard. 
-7. After submitting, it might take some time before your score appears on the leaderboard, depending on the length of the queue of submissions.
-8. Code runs on a virtual machine with an Intel Xeon Gold 5118 CPU at 2.30GHz and 4GB RAM.
-9. No rights can be derived from this information and the leaderboard at any moment in time.
+![flowchart](server/img_1.png)
 
-## Competition rewards
+## Structure
 
-* The group that is first on the leaderboard in round 1 gets 0.5 bonus points on Assignment 2
-* The group that is first on the leaderboard in round 2 gets 0.5 bonus points on Assignment 2
-* The winning groups present their approach (5 minutes) in a video uploaded to Canvas.
+* student_repo: the repository you will provide to students via GitHub classroom. You can make a template or fork repository of this repo. It is needed to provide students with this starter code such that they provide the solution in the exact right format for us to read.
+* server: the repo used on the server, more instructions can be found in the specific repository.
+* leaderboard: the live leaderboard you can share with students. We will use a GitHub Actions workflow which is triggered whenever the repository is updated. The workflow can be found in the leaderboard ``.github`` folder. 
+
+Below an example of how to leaderboard looks:
+
+![example_leaderboard](server/img.png)
+
+Thanks to [Breno Beirigo](https://github.com/brenobeirigo) for his help with all GitHub Classroom related, and to Giovanni Campuzano Arroyo for his help on getting the instances. Instances are based on the Li & Lim PDPTW benchmark instances, see: 10.1109/ICTAI.2001.974461 and https://www.sintef.no/projectweb/top/pdptw/li-lim-benchmark/
